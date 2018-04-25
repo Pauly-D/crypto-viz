@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Cryptocurrency Visualisation</title>
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+	<style>
+		#graphic {
+		  overflow: hidden;
+		  margin: 0;
+		  font-size: 14px;
+		  font-family: "Segoe UI";
+		}
+
+        #graphic svg {
+            background-color: #f7f7f9;
+        }
+
+        #graphic .main-title {
+            font-size: 30px;
+            text-anchor: end;
+            alignment-baseline: text-before-edge;
+            fill: #000;
+        }
+
+        #graphic .by-line {
+            font-size: 15px;
+            text-anchor: end;
+            alignment-baseline: text-before-edge;
+            fill: #333;
+            font-style: italic;
+        }
+
+        #graphic .cite-line {
+            font-size: 14px;
+            text-anchor: end;
+            alignment-baseline: text-after-edge;
+            fill: #333;
+        }
+
+        #graphic .github-line {
+            font-size: 14px;
+            text-anchor: start;
+            alignment-baseline: text-after-edge;
+            fill: #333;
+        }
+
+        #graphic .date-line {
+            font-size: 18px;
+            /* font-weight: bold; */
+            text-anchor: start;
+            alignment-baseline: text-before-edge;
+            fill: #333;
+        }
+
+        #graphic .top-5-heading {
+            font-size: 15px;
+            font-weight: bold;
+            text-anchor: end;
+            alignment-baseline: text-before-edge;
+            fill: #000;
+        }
+
+        #graphic .top-5-item {
+            font-size: 15px;
+            text-anchor: end;
+            alignment-baseline: text-before-edge;
+        }
+
+        #graphic .top-5-item.item-val {
+            fill: #000;
+        }
+
+        #graphic .top-5-item.item-usd-cap {
+            font-weight: bold;
+            fill: #CC333F;
+        }
+
+        #graphic .top-5-item.item-usd-vol {
+            font-weight: bold;
+            fill: #00909e;
+        }
+
+        #graphic .top-5-item.item-name {
+            fill: #000;
+        }
+
+        #graphic .key-title {
+            font-size: 15px;
+            text-anchor: middle;
+            alignment-baseline: text-after-edge;
+            fill: #333;
+        }
+
+         #graphic .key-log {
+            font-size: 12px;
+            text-anchor: middle;
+            alignment-baseline: text-before-edge;
+            fill: #333;
+        }
+
+        #graphic .key-cap {
+            font-size: 14px;
+            font-weight: bold;
+            text-anchor: middle;
+            alignment-baseline: text-before-edge;
+            fill: #CC333F;
+        }
+
+        #graphic .key-vol {
+            font-size: 14px;
+            font-weight: bold;
+            text-anchor: middle;
+            alignment-baseline: text-before-edge;
+            fill: #00909e;
+        }
+
+        #graphic .year-ring {
+            stroke-width: 1px;
+            stroke: #666;
+            fill: none;
+        }
+
+        #graphic .year-clearance {
+            stroke: none;
+            fill:  #f7f7f9;
+        }
+
+        #graphic .year-label {
+            color: #666;
+            text-anchor: middle;
+            alignment-baseline: central;
+        }
+
+        #graphic .year-caption {
+            color: #666;
+            text-anchor: left;
+            alignment-baseline: central;
+            font-weight: bold;
+        }
+
+        #graphic .c-background {
+            stroke-width: 1px;
+            stroke: none;
+            fill: #fff;
+        }
+
+        #graphic .c-cap-arc {
+            stroke: none;
+            fill: #CC333F;
+            opacity: 0.9;
+        }
+
+        #graphic .c-vol-arc {
+            stroke: none;
+            fill: #00A0B0;
+            opacity: 0.9;
+        }
+
+        #graphic .c-code {
+            font-weight: bold;
+            text-anchor: middle;
+            alignment-baseline: central;
+        }
+
+        #graphic .c-name {
+            text-anchor: middle;
+            alignment-baseline: central;
+        }
+
+        #graphic .c-outline {
+            stroke-width: 1px;
+            stroke: #000;
+            fill: none;
+        }
+
+        #graphic .category {
+            opacity: 0.25;
+            stroke: none;
+        }
+
+        #graphic .category-1_conventional {
+            fill: #EDC951;
+        }
+
+        #graphic .category-2_privacy {
+            fill: #556270;
+        }
+
+        #graphic .category-3_settlement {
+            fill: #C7F464;
+        }
+
+        #graphic .category-4_overlay {
+            fill: #4ECDC4;
+        }
+
+        #graphic .category-5_smart-contracts {
+            fill: #C44D58;
+        }
+
+        #graphic .category-6_token {
+            fill: #6A4A3C;
+        }
+
+	</style>
+  </head>
+  <body>
+
+    <div id="graphic">
+    </div>
+	
+    <script type="text/javascript" src="graphic.js"></script>
+
+  </body>
+</html>
