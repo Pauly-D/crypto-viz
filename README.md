@@ -1,5 +1,5 @@
 # crypto-viz
-A cryptocurrency visualization.
+A cryptocurrency visualization. Mostly used to practice using the wonderful d3.js and to appreciate the beauty of SVG. 
 
 
 ## Introduction
@@ -7,16 +7,9 @@ It's an exciting time for cryptocurrency. As of early March 2018, there are more
 
 For comparison, this is a little more than half the size of *Apple Inc.*, the largest publicly-traded company in the world, valued by markets according to its $375 billion in assets and $230 billion in annual revenues in 2017.
 
-Just one year ago, this combined crypto market capitalization was less than $19 billion. Two years ago it was less than $8 billion. A lot of apparent wealth has been created in a very short space of time.
-
-The preeminent and original cryptocurrency, Bitcoin, has grown by ~2200% in that two year period. The remaining growth (~2700%) has come from the alternative currencies (altcoins), which now account for around 60% of the total market.
-
-This visualization shows just 25 of these cryptocurrencies. It's a sample which shows all of the major currencies, plus some others of historical or technological significance. The 25 selected account for over 90% of the total market capitalization, and over 85% of the total trade volume.
-
 The aim of this visualization is to tell a story of the evolution of cryptocurrency. It shows the different directions the technology has gone, and which currencies have grown to be dominant in this emerging landscape.
 
-Data for this visualization has been sourced from the excellent: [coinmarketcap.com](https://coinmarketcap.com/).
-
+Data for this visualization has been sourced from: [coinmarketcap.com](https://coinmarketcap.com/).
 
 ## Technology
 This is a *Pie + Radar + Gauge Chart* written in JavaScript using **d3.js** and **SVG**.
@@ -35,7 +28,7 @@ $ http-server .
 # Open a browser to localhost:8080
 ```
 
-It will take a little time to run, around 15 seconds on my current hardware. The visualization performs an exhaustive search when selecting a layout for the currencies. It will lock up the UI of the tab during that time, and you may be prompted to kill it - just persevere.
+It will take a little time to run, around 15 seconds on my current hardware. The visualization performs an exhaustive search when selecting a layout for the currencies. 
 
 # Requirements
 This visualization requires a somewhat modern browser to run. It uses some semi-recent JavaScript features, such as Maps, Sets, Generators and Arrow Functions.
@@ -44,6 +37,5 @@ It has been tested primarily in Chrome 64.0. It does render on Firefox 58.0, tho
 
 # License and Attribution
 This source code, and the official render of the visualization are dedicated to the public domain.
-
 The data underlying this visualization is copyright [coinmarketcap.com](https://coinmarketcap.com/).
 
